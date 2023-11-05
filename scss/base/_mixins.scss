@@ -1,0 +1,101 @@
+// ========================== //
+//           MIXINS           //
+// ========================== //
+@use "sass:map";
+@use "breakpoints" as *;
+@use "variables" as *;
+@use "functions" as *;
+
+//--FONT STYLES----//
+@mixin font-style($size: false, $weight: false, $lh: false, $ls: false) {
+  @if $size {
+    font-size: fs($size);
+  }
+  @if $weight {
+    font-weight: map-get($font-weight, $weight);
+  }
+  @if $lh {
+    line-height: map-get($line-height, $lh);
+  }
+  @if $ls {
+    letter-spacing: ls($ls);
+  }
+}
+//--MEDIA QUERY---------//
+//--MIN----//
+@mixin mq-min($size) {
+  $bp: map-get($breakpoints, $size);
+  @media screen and (min-width: $bp) {
+    @content;
+  }
+}
+//--MAX----//
+@mixin mq-max($size) {
+  $bp: map-get($breakpoints, $size);
+  @media screen and (max-width: $bp) {
+    @content;
+  }
+}
+//--MIN-MAX---//
+@mixin mq-min-max($size1, $size2) {
+  $bp1: map-get($breakpoints, $size1);
+  $bp2: map-get($breakpoints, $size2);
+  @media screen and (min-wdth: $b1) and (max-width: $bp2) {
+    @content;
+  }
+}
+
+//--FLEX-GRID---------//
+//--FLEX----//
+@mixin flex($direction: column, $justify: center, $align: center, $gap: 1rem) {
+  display: flex;
+  flex-direction: $direction;
+  gap: $gap;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+// If you only want rows
+// @include grid(repeat(2, 1fr));
+
+// If you want rows and columns
+// @include grid(repeat(2, 1fr), repeat(3, 1fr));
+
+// If you want columns but not row same goes with gap, row-gap or column-gap
+// @include grid($columns: repeat(3, 1fr));
+
+//--GRID----//
+@mixin grid($columns: null, $rows: null, $gap: null, $row-gap: null, $column-gap: null) {
+  display: grid;
+  grid-template-columns: $columns;
+  grid-template-rows: $rows;
+  gap: $gap;
+  row-gap: $row-gap;
+  column-gap: $column-gap;
+}
+
+@mixin container($type) {
+  $min-margin-inline: 1rem * 2;
+  $max-width: 64rem;
+  $max-width-narrow: 40rem;
+  $max-width-wide: 75rem;
+
+  @if $type == "base"{
+    width: min(100% - $min-margin-inline, $max-width);
+  }
+  @if $type == "narrow"{
+    width: min(100% - $min-margin-inline, $max-width-narrow);
+  }
+  @if $type == "wide"{
+    width: min(100% - $min-margin-inline, $max-width-wide);
+  }
+  @if $type == "full"{
+    width: min(100% - $min-margin-inline, 100%);
+  }
+  margin-inline: auto
+}
+
+// @mixin clr($color, $shade, $opacity){
+//   $value: clr($color,$shade);
+
+// }

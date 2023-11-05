@@ -1,0 +1,31 @@
+// ========================== //
+//           PAGE             //
+// ========================== //
+
+@use "../base" as *;
+/*--START LAYOUT--------------------*/
+
+/*--START MAIN--------------------*/
+#main {
+  @include flex();
+  min-height: 100vh;
+  @include mq-max("tablet") {
+    display: block;
+  }
+  .main {
+    &__attribution {
+      position: absolute;
+      bottom: 0;
+      margin-bottom: 1rem;
+      font-size: 14px;
+      text-align: center;
+      @include mq-max("tablet") {
+        position: relative;
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+/*--END MAIN--------------------*/
+
+/*--END LAYOUT--------------------*/

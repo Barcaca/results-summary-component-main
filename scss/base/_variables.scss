@@ -1,0 +1,117 @@
+//------------------------//
+//       VARIÁVEIS        //
+//------------------------//
+
+$prefix: lb-;
+
+//--GOOGLE FONTS-----//
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+//--FONTS FAMILY-----//
+$ff-sans: "Hanken Grotesk", sans-serif;
+
+//--FONTS SIZE-------//
+$fsize-base: 18;
+$fsize-sm:   14;
+$fsize-lg:   20;
+$fsize-xl:   26;
+$fsize-h1:   48;
+$fsize-h2:   40;
+$fsize-h3:   32;
+$fsize-h4:   26;
+
+$font-sizes : (
+  "base": $fsize-base,
+  "sm":   $fsize-sm,
+  "lg":   $fsize-lg,
+  "xl":   $fsize-xl,
+  "h1":   $fsize-h1,
+  "h2":   $fsize-h2,
+  "h3":   $fsize-h3,
+  "h4":   $fsize-h4
+);
+
+//--FONTS WEIGTH-----//
+$fw-500: 500;
+$fw-700: 700;
+$fw-800: 800;
+
+$font-weight : (
+  "medium":     $fw-500,
+  "bold":       $fw-700,
+  "extrabold":  $fw-800
+);
+
+//--LINE HEIGHT-----//
+$line-h-base: 1.5;
+$line-h-sm:   1.571;
+$line-h-lg:   1.190;
+
+$line-height: (
+  "base" : $line-h-base,
+  "sm" :   $line-h-sm,
+  "lg" :   $line-h-lg,
+);
+
+//--COLOR SYSTEM----//
+
+//--PRIMARY COLOR ----//
+$light-red:        0, 100%, 67%;
+$orange-yellow:    39, 100%, 56%;
+$green-teal:       166, 100%, 37%;
+$cobalt-blue:      234, 85%, 45%;
+
+//--GRADIENTS COLOR ----//
+$light-slate-blue: hsl(252, 100%, 67%);
+$light-royal-blue: hsl(241, 81%, 54%);
+
+$violet-blue:      hsla(256, 72%, 46%, 1);
+$persian-blue:     hsla(241, 72%, 46%, 0);
+
+$gradient-100: linear-gradient($light-slate-blue, $light-royal-blue);
+$gradient-200: linear-gradient($violet-blue, $persian-blue);
+
+//--NEUTRAL COLOR ----//
+$white:            hsl(0, 0%, 100%);
+$pale-blue:        hsl(221, 100%, 96%);
+$light-lavender:   hsl(241, 100%, 89%);
+$dark-gray-blue:   hsl(224, 30%, 27%);
+
+$colors: (
+  "neutral": (
+    "100": $white,
+    "200": $pale-blue,
+    "300": $light-lavender,
+    "400": $dark-gray-blue,
+  ),
+ "primary":(
+    "100": $light-red,
+    "200": $orange-yellow,
+    "300": $green-teal,
+    "400": $cobalt-blue,
+  ),
+  "gradient": (
+    "primary":   $gradient-100,
+    "secondary": $gradient-200,
+  ),
+);
+
+//--BOX SHADOW----//
+$box-shadow-1:
+0 1px 1px rgba(0,0,0,0.15),
+0 2px 2px rgba(0,0,0,0.15),
+0 4px 4px rgba(0,0,0,0.15),
+0 8px 8px rgba(0,0,0,0.15);
+
+$box-shadow-2:
+0 1px 1px rgba(0,0,0,0.12),
+0 2px 2px rgba(0,0,0,0.12),
+0 4px 4px rgba(0,0,0,0.12),
+0 8px 8px rgba(0,0,0,0.12),
+0 16px 16px rgba(0,0,0,0.12);
+
+$shadows:(
+  "sharp":   $box-shadow-1,
+  "diffuse": $box-shadow-2
+);

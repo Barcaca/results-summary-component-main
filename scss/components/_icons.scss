@@ -1,0 +1,30 @@
+// ========================== //
+//           ICON             //
+// ========================== //
+
+@use "../base" as *;
+@use "sass:map";
+
+/*--Start Icon--------------------*/
+.icon {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.25;
+
+  &--reaction {
+    stroke: hsl(var(--lb-clr-primary-100));
+  }
+  &--memory {
+    stroke: hsl(var(--lb-clr-primary-200));
+  }
+  &--verbal {
+    stroke: hsl(var(--lb-clr-primary-300));
+  }
+  &--visual {
+    stroke: hsl(var(--lb-clr-primary-400));
+  }
+}
+/*--End Icon--------------------*/

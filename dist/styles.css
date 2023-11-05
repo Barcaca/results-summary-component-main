@@ -1,0 +1,323 @@
+/* GOOGLE FONT */
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+/*--START VARIABLE--------------------*/
+:root {
+  /*--COLOR--------------------*/
+  --lb-clr-neutral-100: hsl(0, 0%, 100%);
+  --lb-clr-neutral-200: hsl(221, 100%, 96%);
+  --lb-clr-neutral-300: hsl(241, 100%, 89%);
+  --lb-clr-neutral-400: hsl(224, 30%, 27%);
+  --lb-clr-primary-100: 0, 100%, 67%;
+  --lb-clr-primary-200: 39, 100%, 56%;
+  --lb-clr-primary-300: 166, 100%, 37%;
+  --lb-clr-primary-400: 234, 85%, 45%;
+  --lb-clr-gradient-primary: linear-gradient(
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%)
+  );
+  --lb-clr-gradient-secondary: linear-gradient(
+    hsl(256, 72%, 46%),
+    hsla(241, 72%, 46%, 0)
+  );
+  /*--FONT FAMILY--------------------*/
+  --lb-font-family: $ff-sans;
+  /*--FONT SIZE--------------------*/
+  --lb-font-base: 18;
+  --lb-font-sm: 14;
+  --lb-font-lg: 20;
+  --lb-font-xl: 26;
+  --lb-font-h1: 48;
+  --lb-font-h2: 40;
+  --lb-font-h3: 32;
+  --lb-font-h4: 26;
+  /*--FONT WEIGHT--------------------*/
+  --lb-font-medium: 500;
+  --lb-font-bold: 700;
+  --lb-font-extrabold: 800;
+  /*--LINE HEIGHT--------------------*/
+  --lb-line-base: 1.5;
+  --lb-line-sm: 1.571;
+  --lb-line-lg: 1.19;
+  /*--BOX SHADOW-------------------*/
+  --lb-box-sharp: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.15),
+    0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.15);
+  --lb-box-diffuse: 0 1px 1px rgba(0, 0, 0, 0.12), 0 2px 2px rgba(0, 0, 0, 0.12),
+    0 4px 4px rgba(0, 0, 0, 0.12), 0 8px 8px rgba(0, 0, 0, 0.12),
+    0 16px 16px rgba(0, 0, 0, 0.12);
+}
+
+/*--END VARIABLE--------------------*/
+/*--START RESET--------------------*/
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: inherit;
+  border: 0 solid transparent;
+}
+
+body {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 1.125rem;
+}
+
+img,
+picture,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*--END RESET--------------------*/
+/*--Start Card--------------------*/
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 680px;
+  height: 470px;
+  border-radius: 2rem;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.15),
+    0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.15);
+}
+@media screen and (max-width: 45em) {
+  .card {
+    grid-template-columns: 1fr;
+    width: auto;
+    height: auto;
+  }
+}
+@media screen and (max-width: 37.5em) {
+  .card {
+    border-radius: 0;
+    box-shadow: none;
+  }
+}
+.card__title {
+  padding: 2rem 0 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+@media screen and (max-width: 45em) {
+  .card__title {
+    padding: 1rem 0 0;
+  }
+}
+.card__title--result {
+  opacity: 0.8;
+}
+.card__title--summary {
+  position: relative;
+  left: 0;
+}
+.card__results {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  color: hsl(0, 0%, 100%);
+  text-align: center;
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  border-radius: 2rem;
+}
+@media screen and (max-width: 45em) {
+  .card__results {
+    gap: 1.5rem;
+  }
+}
+@media screen and (max-width: 37.5em) {
+  .card__results {
+    border-radius: 0 0 2rem 2rem;
+  }
+}
+.card__results-score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 180px;
+  height: 180px;
+  font-size: 4.0625rem;
+  font-weight: 800;
+  background: linear-gradient(hsl(256, 72%, 46%), hsla(241, 72%, 46%, 0));
+  border-radius: 50%;
+}
+.card__results-score:hover {
+  transform: scale(1.2);
+  background: hsl(var(--lb-clr-primary-400), 0.8);
+}
+.card__results-score span {
+  font-size: 1.125rem;
+  font-weight: 500;
+  opacity: 0.4;
+}
+.card__results-description--title {
+  font-size: 1.875rem;
+}
+.card__results-description--text {
+  padding: 1rem 3.3rem;
+  font-size: 1rem;
+  opacity: 0.6;
+}
+.card__summary {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 2rem;
+}
+@media screen and (max-width: 45em) {
+  .card__summary {
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
+.card__summary-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+.card__summary-item {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.card__summary-item-flex {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.card__summary-item--reaction {
+  background-color: hsl(var(--lb-clr-primary-100), 0.1);
+  border: 1px solid hsl(var(--lb-clr-primary-100), 0.1);
+}
+.card__summary-item--reaction:hover {
+  transform: scale(1.1);
+  color: hsl(0, 0%, 100%);
+  background: hsl(var(--lb-clr-primary-100), 0.9);
+}
+.card__summary-item--reaction:hover .icon--reaction {
+  stroke: hsl(0, 0%, 100%);
+}
+.card__summary-item--memory {
+  background-color: hsl(var(--lb-clr-primary-200), 0.1);
+  border: 1px solid hsl(var(--lb-clr-primary-200), 0.1);
+}
+.card__summary-item--memory:hover {
+  transform: scale(1.1);
+  color: hsl(0, 0%, 100%);
+  background: hsl(var(--lb-clr-primary-200), 0.9);
+}
+.card__summary-item--memory:hover .icon--memory {
+  stroke: hsl(0, 0%, 100%);
+}
+.card__summary-item--verbal {
+  background-color: hsl(var(--lb-clr-primary-300), 0.1);
+  border: 1px solid hsl(var(--lb-clr-primary-300), 0.1);
+}
+.card__summary-item--verbal:hover {
+  transform: scale(1.1);
+  color: hsl(0, 0%, 100%);
+  background: hsl(var(--lb-clr-primary-300), 0.9);
+}
+.card__summary-item--verbal:hover .icon--verbal {
+  stroke: hsl(0, 0%, 100%);
+}
+.card__summary-item--visual {
+  background-color: hsl(var(--lb-clr-primary-400), 0.1);
+  border: 1px solid hsl(var(--lb-clr-primary-400), 0.1);
+}
+.card__summary-item--visual:hover {
+  transform: scale(1.1);
+  color: hsl(0, 0%, 100%);
+  background: hsl(var(--lb-clr-primary-400), 0.9);
+}
+.card__summary-item--visual:hover .icon--visual {
+  stroke: hsl(0, 0%, 100%);
+}
+.card__summary-score span {
+  color: hsl(241, 100%, 89%);
+}
+
+/*--End Card--------------------*/
+/*--Start Button--------------------*/
+.button {
+  cursor: pointer;
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(224, 30%, 27%);
+  border-radius: 100vw;
+}
+.button:hover {
+  background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+}
+
+/*--End Button--------------------*/
+/*--Start Icon--------------------*/
+.icon {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.25;
+}
+.icon--reaction {
+  stroke: hsl(var(--lb-clr-primary-100));
+}
+.icon--memory {
+  stroke: hsl(var(--lb-clr-primary-200));
+}
+.icon--verbal {
+  stroke: hsl(var(--lb-clr-primary-300));
+}
+.icon--visual {
+  stroke: hsl(var(--lb-clr-primary-400));
+}
+
+/*--End Icon--------------------*/
+/*--START LAYOUT--------------------*/
+/*--START MAIN--------------------*/
+#main {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+@media screen and (max-width: 45em) {
+  #main {
+    display: block;
+  }
+}
+#main .main__attribution {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 1rem;
+  font-size: 14px;
+  text-align: center;
+}
+@media screen and (max-width: 45em) {
+  #main .main__attribution {
+    position: relative;
+    margin-top: 1rem;
+  }
+}
+
+/*--END MAIN--------------------*/
+/*--END LAYOUT--------------------*/
+
+/*# sourceMappingURL=e:/Designer/FrontendMentor/results-summary-component-main/dist/styles.css.map */

@@ -1,0 +1,155 @@
+// ========================== //
+//           CARD             //
+// ========================== //
+
+@use "../base" as *;
+@use "sass:map";
+
+//--Card----//
+/*--Start Card--------------------*/
+.card {
+  width: 680px;
+  height: 470px;
+  border-radius: 2rem;
+  box-shadow: $box-shadow-1;
+  @include grid(1fr 1fr);
+
+  @include mq-max("tablet") {
+    grid-template-columns: 1fr;
+    width: auto;
+    height: auto;
+  }
+  @include mq-max("mobile") {
+    border-radius: 0;
+    box-shadow: none;
+  }
+  &__title {
+    @include font-style(lg, bold);
+    padding: 2rem 0 0;
+    @include mq-max("tablet") {
+      padding: 1rem 0 0;
+    }
+    &--result {
+      opacity: 0.8;
+    }
+    &--summary {
+      position: relative;
+      left: 0;
+    }
+  }
+  //--Card Result----//
+  &__results {
+    @include flex($justify: null, $gap: 2rem);
+    color: clr(neutral, "100");
+    text-align: center;
+    background: clr(gradient, primary);
+    border-radius: 2rem;
+    @include mq-max("tablet") {
+      gap: 1.5rem;
+    }
+    @include mq-max("mobile") {
+      border-radius: 0 0 2rem 2rem;
+    }
+    &-score {
+      @include flex($gap: null);
+      width: 180px;
+      height: 180px;
+      background: clr(gradient, secondary);
+      border-radius: 50%;
+      @include font-style(65, extrabold);
+      &:hover {
+        transform: scale(1.2);
+        background: hsl(var(--lb-clr-primary-400), 0.8);
+      }
+      span {
+        @include font-style(base, medium);
+        opacity: 0.4;
+      }
+    }
+    &-description {
+      &--title {
+        @include font-style(30);
+      }
+      &--text {
+        @include font-style(16);
+        padding: 1rem 3.3rem;
+        opacity: 0.6;
+      }
+    }
+  }
+  //--Card Summary----//
+  &__summary {
+    @include flex($justify: null, $align: null, $gap: 2rem);
+    padding: 0 2rem;
+    @include mq-max("tablet") {
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+    &-grid {
+      @include flex($align: null);
+      @include font-style(sm, bold);
+    }
+    &-item {
+      @include flex(row, space-between);
+      padding: 1rem;
+      border-radius: 10px;
+      &-flex {
+        @include flex(null, null, center, 0.5rem);
+      }
+      &--reaction {
+        background-color: hsl(var(--lb-clr-primary-100), 0.1);
+        border: 1px solid hsl(var(--lb-clr-primary-100), 0.1);
+        &:hover {
+          transform: scale(1.1);
+          color: clr(neutral, "100");
+          background: hsl(var(--lb-clr-primary-100), 0.9);
+          .icon--reaction {
+            stroke: clr(neutral, "100");
+          }
+        }
+      }
+      &--memory {
+        background-color: hsl(var(--lb-clr-primary-200), 0.1);
+        border: 1px solid hsl(var(--lb-clr-primary-200), 0.1);
+        &:hover {
+          transform: scale(1.1);
+          color: clr(neutral, "100");
+          background: hsl(var(--lb-clr-primary-200), 0.9);
+          .icon--memory {
+            stroke: clr(neutral, "100");
+          }
+        }
+      }
+      &--verbal {
+        background-color: hsl(var(--lb-clr-primary-300), 0.1);
+        border: 1px solid hsl(var(--lb-clr-primary-300), 0.1);
+        &:hover {
+          transform: scale(1.1);
+          color: clr(neutral, "100");
+          background: hsl(var(--lb-clr-primary-300), 0.9);
+          .icon--verbal {
+            stroke: clr(neutral, "100");
+          }
+        }
+      }
+      &--visual {
+        background-color: hsl(var(--lb-clr-primary-400), 0.1);
+        border: 1px solid hsl(var(--lb-clr-primary-400), 0.1);
+        &:hover {
+          transform: scale(1.1);
+          color: clr(neutral, "100");
+          background: hsl(var(--lb-clr-primary-400), 0.9);
+          .icon--visual {
+            stroke: clr(neutral, "100");
+          }
+        }
+      }
+    }
+    &-score {
+      span {
+        color: clr(neutral, "300");
+      }
+    }
+  }
+}
+/*--End Card--------------------*/

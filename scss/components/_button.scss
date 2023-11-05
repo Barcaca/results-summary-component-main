@@ -1,0 +1,20 @@
+// ========================== //
+//          BUTTON            //
+// ========================== //
+
+@use "../base" as *;
+@use "sass:map";
+
+/*--Start Button--------------------*/
+.button {
+  cursor: pointer;
+  padding: 1rem 2rem;
+  color: clr("neutral", "100");
+  background-color: clr("neutral", "400");
+  border-radius: 100vw;
+  @include font-style("base", medium);
+  &:hover {
+    background: clr(gradient, primary);
+  }
+}
+/*--End Button--------------------*/
