@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Results Summary Component/Frontier Mentor](https://www.frontendmentor.io/solutions/results-summary-component-frontend-mentor-ESWFeYtJik)
 - Live Site URL: [Vercel App](https://results-summary-component-main-beta-nine.vercel.app)
 
 ## My process
