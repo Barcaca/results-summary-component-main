@@ -99,10 +99,16 @@
       &--reaction {
         background-color: hsl(var(--lb-clr-primary-100), 0.1);
         border: 1px solid hsl(var(--lb-clr-primary-100), 0.1);
+        h3 {
+          color: hsl(var(--lb-clr-primary-100));
+        }
         &:hover {
           transform: scale(1.1);
           color: clr(neutral, "100");
           background: hsl(var(--lb-clr-primary-100), 0.9);
+          h3 {
+            color: clr(neutral, "100");
+          }
           .icon--reaction {
             stroke: clr(neutral, "100");
           }
@@ -111,10 +117,16 @@
       &--memory {
         background-color: hsl(var(--lb-clr-primary-200), 0.1);
         border: 1px solid hsl(var(--lb-clr-primary-200), 0.1);
+        h3 {
+          color: hsl(var(--lb-clr-primary-200));
+        }
         &:hover {
           transform: scale(1.1);
           color: clr(neutral, "100");
           background: hsl(var(--lb-clr-primary-200), 0.9);
+          h3 {
+            color: clr(neutral, "100");
+          }
           .icon--memory {
             stroke: clr(neutral, "100");
           }
@@ -123,10 +135,16 @@
       &--verbal {
         background-color: hsl(var(--lb-clr-primary-300), 0.1);
         border: 1px solid hsl(var(--lb-clr-primary-300), 0.1);
+        h3 {
+          color: hsl(var(--lb-clr-primary-300));
+        }
         &:hover {
           transform: scale(1.1);
           color: clr(neutral, "100");
           background: hsl(var(--lb-clr-primary-300), 0.9);
+          h3 {
+            color: clr(neutral, "100");
+          }
           .icon--verbal {
             stroke: clr(neutral, "100");
           }
@@ -135,10 +153,16 @@
       &--visual {
         background-color: hsl(var(--lb-clr-primary-400), 0.1);
         border: 1px solid hsl(var(--lb-clr-primary-400), 0.1);
+        h3 {
+          color: hsl(var(--lb-clr-primary-400));
+        }
         &:hover {
           transform: scale(1.1);
           color: clr(neutral, "100");
           background: hsl(var(--lb-clr-primary-400), 0.9);
+          h3 {
+            color: clr(neutral, "100");
+          }
           .icon--visual {
             stroke: clr(neutral, "100");
           }

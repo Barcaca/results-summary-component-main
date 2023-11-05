@@ -201,10 +201,16 @@ svg {
   background-color: hsl(var(--lb-clr-primary-100), 0.1);
   border: 1px solid hsl(var(--lb-clr-primary-100), 0.1);
 }
+.card__summary-item--reaction h3 {
+  color: hsl(var(--lb-clr-primary-100));
+}
 .card__summary-item--reaction:hover {
   transform: scale(1.1);
   color: hsl(0, 0%, 100%);
   background: hsl(var(--lb-clr-primary-100), 0.9);
+}
+.card__summary-item--reaction:hover h3 {
+  color: hsl(0, 0%, 100%);
 }
 .card__summary-item--reaction:hover .icon--reaction {
   stroke: hsl(0, 0%, 100%);
@@ -213,10 +219,16 @@ svg {
   background-color: hsl(var(--lb-clr-primary-200), 0.1);
   border: 1px solid hsl(var(--lb-clr-primary-200), 0.1);
 }
+.card__summary-item--memory h3 {
+  color: hsl(var(--lb-clr-primary-200));
+}
 .card__summary-item--memory:hover {
   transform: scale(1.1);
   color: hsl(0, 0%, 100%);
   background: hsl(var(--lb-clr-primary-200), 0.9);
+}
+.card__summary-item--memory:hover h3 {
+  color: hsl(0, 0%, 100%);
 }
 .card__summary-item--memory:hover .icon--memory {
   stroke: hsl(0, 0%, 100%);
@@ -225,10 +237,16 @@ svg {
   background-color: hsl(var(--lb-clr-primary-300), 0.1);
   border: 1px solid hsl(var(--lb-clr-primary-300), 0.1);
 }
+.card__summary-item--verbal h3 {
+  color: hsl(var(--lb-clr-primary-300));
+}
 .card__summary-item--verbal:hover {
   transform: scale(1.1);
   color: hsl(0, 0%, 100%);
   background: hsl(var(--lb-clr-primary-300), 0.9);
+}
+.card__summary-item--verbal:hover h3 {
+  color: hsl(0, 0%, 100%);
 }
 .card__summary-item--verbal:hover .icon--verbal {
   stroke: hsl(0, 0%, 100%);
@@ -237,10 +255,16 @@ svg {
   background-color: hsl(var(--lb-clr-primary-400), 0.1);
   border: 1px solid hsl(var(--lb-clr-primary-400), 0.1);
 }
+.card__summary-item--visual h3 {
+  color: hsl(var(--lb-clr-primary-400));
+}
 .card__summary-item--visual:hover {
   transform: scale(1.1);
   color: hsl(0, 0%, 100%);
   background: hsl(var(--lb-clr-primary-400), 0.9);
+}
+.card__summary-item--visual:hover h3 {
+  color: hsl(0, 0%, 100%);
 }
 .card__summary-item--visual:hover .icon--visual {
   stroke: hsl(0, 0%, 100%);
